@@ -17,3 +17,6 @@ $router->get('/penceramah', 'PenceramahController@index');
 $router->get('/penceramah/{id}', 'PenceramahController@show');
 $router->put('/penceramah/{id}', 'PenceramahController@update');
 $router->delete('/penceramah/{id}', 'PenceramahController@delete');
+
+// Users
+$router->post('/register', 'UserController@register');
