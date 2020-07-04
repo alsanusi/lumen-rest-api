@@ -49,4 +49,16 @@ class PenceramahController extends Controller
 
         return response()->json($penceramahData);
     }
+
+    public function delete(Request $request, $id){
+        $penceramahData = Penceramah::find($id);
+
+        if(!$penceramahData) {
+            return response()->json([], 404);
+        }
+
+        $penceramahData->delete();
+        
+        return response()->json(['message' => 'Data Terhapus!']);
+    }
 }
