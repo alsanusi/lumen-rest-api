@@ -11,6 +11,4 @@
 |
 */
 
-$router->get('/', function () use ($router) {
-    return "Welcome to Lumen";
-});
+$router->post('/penceramah', 'PenceramahController@create');

@@ -4,7 +4,7 @@ namespace App;
 
 use Illuminate\Database\Eloquent\Model;
 
-class User extends Model
+class Penceramah extends Model
 {
     protected $table = 'penceramah';
     /**
@@ -13,6 +13,6 @@ class User extends Model
      * @var array
      */
     protected $fillable = [
-        'nama', 'status',
+        'nama', 'status'
     ];
 }
