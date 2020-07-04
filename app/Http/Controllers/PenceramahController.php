@@ -29,4 +29,24 @@ class PenceramahController extends Controller
 
         return response()->json($penceramahData);
     }
+
+    public function update(Request $request, $id) {
+        $penceramahData = Penceramah::find($id);
+
+        if(!$penceramahData) {
+            return response()->json([], 404);
+        }
+
+        $this->validate($request, [
+            'nama' => 'string',
+            'status' => 'string'
+        ]);
+
+        $data = $request->all();
+
+        $penceramahData->fill($data);
+        $penceramahData->save();
+
+        return response()->json($penceramahData);
+    }
 }

@@ -15,3 +15,4 @@
 $router->post('/penceramah', 'PenceramahController@create');
 $router->get('/penceramah', 'PenceramahController@index');
 $router->get('/penceramah/{id}', 'PenceramahController@show');
+$router->put('/penceramah/{id}', 'PenceramahController@update');
