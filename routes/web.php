@@ -11,6 +11,11 @@
 |
 */
 
+// Index
+$router->get('/', function () use ($router) {
+    return $router->app->version();
+});
+
 // Penceramah
 $router->post('/penceramah', 'PenceramahController@create');
 $router->get('/penceramah', 'PenceramahController@index');
